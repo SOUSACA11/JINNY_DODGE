@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.P)) // 게임오버 상태에서 P키를 누른 경우
             {
                 SceneManager.LoadScene("GameStage"); // GameStage 씬을 로드
+                HPManager.HP = 3;
             }
         }
     }

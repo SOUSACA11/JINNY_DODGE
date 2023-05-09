@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,7 +30,31 @@ public class PlayerController : MonoBehaviour
         playerRigidbody.velocity = newVelocity;
     }
 
-    public void Die() // 총알이 실행
+
+    private void OnTriggerEnter(Collider other) // 트리거 충돌 시 자동으로 실행되는 메서드 // OnTriggerEnter-충돌 이벤트 메서드
+    {
+        if (other.tag == "Bullet") // 충돌한 상대방 게임 오브젝트 Bullets컴포넌트 가져오기
+        {
+            Debug.Log("맞음");
+            HPManager.HP -= 1;
+        }
+
+        if (HPManager.HP == 0)
+        {
+            Die();
+        }
+
+        else if (other.tag == "Item")
+        {
+
+            Debug.Log("무적");
+            gameObject.SetActive(false);
+
+            
+        }
+    }
+
+    public void Die() 
     {
         gameObject.SetActive(false);
         // 자신의 게임 오브젝트 비활성화
@@ -39,4 +64,3 @@ public class PlayerController : MonoBehaviour
 
     }
 }
-
