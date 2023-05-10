@@ -17,7 +17,7 @@ public class Item : MonoBehaviour
         itemRigidbody = GetComponent<Rigidbody>(); // 아이템 리지드바디
         itemRigidbody.velocity = transform.forward * 0.5f;
 
-        Destroy(gameObject, 8f); //아이템 파괴
+        Destroy(gameObject, 5f); //아이템 파괴
     }
 
    

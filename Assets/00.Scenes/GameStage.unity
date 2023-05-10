@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.08024225, g: 0.35076144, b: 0.7469371, a: 1}
+  m_IndirectSpecularColor: {r: 0.080235146, g: 0.35094076, b: 0.74748725, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -211,7 +211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1008962264195968049, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -287,7 +287,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ad14f3aabca12f347a4338274527dc92, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ad14f3aabca12f347a4338274527dc92, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ad14f3aabca12f347a4338274527dc92, type: 3}
       propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a8aac5093ede90e47bbd5201c3163847, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ad14f3aabca12f347a4338274527dc92, type: 3}
+      propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: a8aac5093ede90e47bbd5201c3163847, type: 2}
     - target: {fileID: 919132149155446097, guid: ad14f3aabca12f347a4338274527dc92, type: 3}
@@ -373,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1008962264195968049, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -474,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1008962264195968049, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -631,7 +643,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 2704972445029379607, guid: 07902762135de3340b190e3a068e5d8b, type: 3}
-  count: 3
 --- !u!65 &184916759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1069,7 +1080,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9056604, g: 0.8754279, b: 0.80740476, a: 1}
+  m_Color: {r: 0.9811321, g: 0.876478, b: 0.654088, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1749,6 +1760,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  godTime: 3
+  blinkTime: 0.1
+  meshRenderer: {fileID: 988057412}
+--- !u!23 &988057412 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ad14f3aabca12f347a4338274527dc92, type: 3}
+  m_PrefabInstance: {fileID: 70675878}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1020321748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1818,7 +1837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1008962264195968049, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2319,7 +2338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1008962264195968049, guid: 2cc095d20b66b1f4ba0441b3b2a708d8, type: 3}
       propertyPath: m_Materials.Array.data[0]
