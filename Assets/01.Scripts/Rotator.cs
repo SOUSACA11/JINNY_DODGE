@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    public float rotationSpeed = 30f;
+    public float rotationSpeed = 30f; // 회전 설정
     
     void Update()
     {

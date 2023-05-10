@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject [] prefabs; //생성 할 게임 오브젝트
 
     private BoxCollider area; //메쉬 콜라이더 사이즈 측정
-    public int count = 3; //생성 갯수
+    //public int count = 3; //생성 갯수
 
     
     private List<GameObject> ItemList = new List<GameObject>();
@@ -16,13 +16,18 @@ public class SpawnManager : MonoBehaviour
     {
         area = GetComponent<BoxCollider>();
 
-        for(int i =0; i< count; ++i) // count 수 만큼 생성
-        {
-            Spawn(); // 스폰에 생성
-        }
+        StartCoroutine(itemspawn);
 
-        area.enabled = false;
+       // for(int i =0; i< count; ++i) // count 수 만큼 생성
+        //{
+          //  Spawn(); // 스폰에 생성
+        //}
+
+       // area.enabled = false;
     }
+
+    IEnumerator 
+
 
     private Vector3 GetRandomPosition() //위치 설정
     {

@@ -48,10 +48,10 @@ public class PlayerController : MonoBehaviour
 
          if (other.tag == "Item") //충돌한 상대방 게임 오브젝트가 Item일 경우
         {
-
             Debug.Log("무적");
             this.gameObject.tag = "Untagged";
 
+            //태그 다시 돌리기
             
         }
     }
