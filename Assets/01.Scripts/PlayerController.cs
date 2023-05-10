@@ -28,27 +28,29 @@ public class PlayerController : MonoBehaviour
 
         //리지드바디의 속도에 newVelcovity 할당
         playerRigidbody.velocity = newVelocity;
+
+        
     }
 
 
     private void OnTriggerEnter(Collider other) // 트리거 충돌 시 자동으로 실행되는 메서드 // OnTriggerEnter-충돌 이벤트 메서드
     {
-        if (other.tag == "Bullet") // 충돌한 상대방 게임 오브젝트 Bullets컴포넌트 가져오기
+        if (other.tag == "Bullet") // 충돌한 상대방 게임 오브젝트가 Bullets일 경우
         {
-            Debug.Log("맞음");
+            Debug.Log("맞음"); // 충돌시 체력 -1
             HPManager.HP -= 1;
         }
 
-        if (HPManager.HP == 0)
+        if (HPManager.HP == 0) //체력 0 이면 다이 메서드 발동
         {
             Die();
         }
 
-        else if (other.tag == "Item")
+         if (other.tag == "Item") //충돌한 상대방 게임 오브젝트가 Item일 경우
         {
 
             Debug.Log("무적");
-            gameObject.SetActive(false);
+            this.gameObject.tag = "Untagged";
 
             
         }
